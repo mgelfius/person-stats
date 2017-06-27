@@ -25,19 +25,28 @@ function changeHeading(ev){
     genderItem.textContent = `Gender: ${gender}`
     const heightItem = document.createElement('li')
     heightItem.textContent = `Height: ${feet}' ${inches}"`
+    const colorItem = document.createElement('li')
+    colorItem.textContent = `Favorite Color: ${textColor}`
+
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = textColor;
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    colorItem.appendChild(colorDiv)
 
     div.appendChild(list);
     list.appendChild(nameItem)
     list.appendChild(ageItem)
     list.appendChild(genderItem)
     list.appendChild(heightItem)
-
+    list.appendChild(colorItem)
+/*
     heading.innerHTML = name + '\'s Stats'
     divName.innerHTML = 'Name: ' + name
     divAge.innerHTML = 'Age: ' + age
     divGender.textContent = 'Gender: ' + gender
     divHeight.textContent = 'Height: ' + feet + '\' ' + inches + '"'
-
+*/
     document.getElementById('stats').style.color = textColor
     document.getElementById('stats').style.background = bgcolor
     document.getElementById('statsHead').style.color = textColor
