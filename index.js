@@ -13,7 +13,24 @@ function changeHeading(ev){
     const divAge = document.querySelector('#divAge')
     const divGender = document.querySelector('#divGender')
     const divHeight = document.querySelector('#divHeight')
-    
+    const div = document.querySelector("#stats")
+
+
+    const list = document.createElement('ul')
+    const nameItem = document.createElement('li')
+    nameItem.textContent = `Name: ${name}`
+    const ageItem = document.createElement('li')
+    ageItem.textContent = `Age: ${age}`
+    const genderItem = document.createElement('li')
+    genderItem.textContent = `Gender: ${gender}`
+    const heightItem = document.createElement('li')
+    heightItem.textContent = `Height: ${feet}' ${inches}"`
+
+    div.appendChild(list);
+    list.appendChild(nameItem)
+    list.appendChild(ageItem)
+    list.appendChild(genderItem)
+    list.appendChild(heightItem)
 
     heading.innerHTML = name + '\'s Stats'
     divName.innerHTML = 'Name: ' + name
