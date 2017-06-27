@@ -28,10 +28,7 @@ function changeHeading(ev){
     const colorItem = document.createElement('li')
     colorItem.textContent = `Favorite Color: ${textColor}`
 
-    const colorDiv = document.createElement('div')
-    colorDiv.style.backgroundColor = textColor;
-    colorDiv.style.width = '6rem'
-    colorDiv.style.height = '3rem'
+    const colorDiv = renderColor(textColor)
     colorItem.appendChild(colorDiv)
 
     div.appendChild(list);
@@ -40,8 +37,9 @@ function changeHeading(ev){
     list.appendChild(genderItem)
     list.appendChild(heightItem)
     list.appendChild(colorItem)
-/*
+
     heading.innerHTML = name + '\'s Stats'
+/*
     divName.innerHTML = 'Name: ' + name
     divAge.innerHTML = 'Age: ' + age
     divGender.textContent = 'Gender: ' + gender
@@ -53,5 +51,17 @@ function changeHeading(ev){
     document.getElementById('statsHead').style.background = bgcolor
 }
 
+function renderColor(textColor){
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = textColor;
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    return colorDiv
+}
+
+//val2 will only be used for height because I have it split into feet and inches
+function renderListItem(itemName, val1, val2){
+  
+}
 const personForm = document.querySelector('#person-form')
 personForm.addEventListener('submit', changeHeading)
