@@ -12,28 +12,28 @@
     <form id="person-form">
       <p>
         <label for="personName">Name </label>
-        <input type ="text" name="personName">
+        <input type ="text" name="personName" required>
         <br>
         <label for="personAge">Age </label>
-        <input type="number" name="personAge" min="1">
+        <input type="number" name="personAge" min="1" required>
         <br>
         <label for="personGender">Gender </label>
-        <select name="personGender">
+        <select name="personGender" required>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
         </select>
         <br>
         <label for="personHeight">Height </label>
-        <input type="number" name="heightFeet" maxlength="1" size="1" min="1" max="8">
+        <input type="number" name="heightFeet" maxlength="1" size="1" min="1" max="8" required>
         <label>feet</label>
-        <input type="number" name="heightInches" maxlength="2" size="2" min="0" max="11">
+        <input type="number" name="heightInches" maxlength="2" size="2" min="0" max="11" required>
         <label>inches</label>
         <br>
         <label for="color">Text color </label>
         <input type="text" name="color">
       </p>
-      <button type="submit">Go!</button>
+      <button type="submit">Submit</button>
     </form>
 
     <div id="stats">

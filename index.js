@@ -8,15 +8,17 @@ function changeHeading(ev){
     const feet = f.heightFeet.value
     const inches = f.heightInches.value
     const heading = document.querySelector("h1")
-    heading.innerHTML = name + "'s Stats"
     const divName = document.querySelector("#divName")
-    divName.innerHTML = "Name: " + name
     const divAge = document.querySelector("#divAge")
-    divAge.innerHTML = "Age: " + age
     const divGender = document.querySelector("#divGender")
-    divGender.textContent = "Gender: " + gender
     const divHeight = document.querySelector("#divHeight")
+    
+    heading.innerHTML = name + "'s Stats"
+    divName.innerHTML = "Name: " + name
+    divAge.innerHTML = "Age: " + age
+    divGender.textContent = "Gender: " + gender
     divHeight.textContent = "Height: " + feet + "' " + inches + '"'
+
     document.getElementById("stats").style.color = textColor
 }
 
