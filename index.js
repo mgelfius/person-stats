@@ -7,12 +7,14 @@ function changeHeading(ev){
     const gender = f.personGender.value
     const feet = f.heightFeet.value
     const inches = f.heightInches.value
+    const bgcolor = f.bgcolor.value
     const heading = document.querySelector("h1")
     const divName = document.querySelector("#divName")
     const divAge = document.querySelector("#divAge")
     const divGender = document.querySelector("#divGender")
     const divHeight = document.querySelector("#divHeight")
     
+
     heading.innerHTML = name + "'s Stats"
     divName.innerHTML = "Name: " + name
     divAge.innerHTML = "Age: " + age
@@ -20,6 +22,9 @@ function changeHeading(ev){
     divHeight.textContent = "Height: " + feet + "' " + inches + '"'
 
     document.getElementById("stats").style.color = textColor
+    document.getElementById("stats").style.background = bgcolor
+    document.getElementById("statsHead").style.color = textColor
+    document.getElementById("statsHead").style.background = bgcolor
 }
 
 const personForm = document.querySelector("#person-form")
