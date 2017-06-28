@@ -1,15 +1,14 @@
-body {
-    padding: 1rem;
+body{
+    padding: 2rem;
 }
 
 button {
     color: black;
-    border: 2px;
-    border-color: gray;;
-    border-style: solid;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px 40px;
     background-color: cornflowerblue; 
+}
+
+input, select{
+    max-width: 35rem;
 }
